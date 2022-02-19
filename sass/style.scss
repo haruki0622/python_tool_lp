@@ -37,9 +37,10 @@ body {
 }
 
 .header_item {
-  margin-right:50px;
+  margin-left:50px;
   transition: all 0.2s;
 }
+
 .header_item a:hover {
   color: #2164E1;
   cursor: pointer;
@@ -57,6 +58,7 @@ body {
   font-weight:900;
   margin-bottom: 30px;
 }
+
 .points_text p {
   font-size:2rem;
   line-height: 1.7;
@@ -163,11 +165,13 @@ body {
   display: flex;
   justify-content:space-between;
   margin: 100px 0 ;
+  margin-bottom: 100px;
 }
 
 .services_item:nth-child(odd) {
   flex-direction: row-reverse;
 }
+
 .services_item_text {
   width: 40%;
 }
@@ -182,11 +186,25 @@ body {
   line-height: 2;
 }
 
+.services_item_text ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+.services_item_text li {
+  font-size: 1.6rem;
+  font-family:monospace;
+  padding: 10px 14px;
+  background-color: lightgray;
+  list-style:none;
+  border-radius: 999px;
+  margin: 8px 10px;
+}
+
 .services_item_img {
   max-width: 600px;
   width: 60%;
   height: 350px;
-  background-color: lightblue;
 }
 .influences{
   padding: 100px 0 ;
@@ -202,6 +220,11 @@ body {
   text-align: center;
   font-weight:normal;
   margin: 80px 0;
+}
+
+.model {
+  text-align: center;
+  font-size:15px;
 }
 
 .influences_span {
@@ -239,8 +262,8 @@ body {
 }
 .prices_list {
   display: flex;
-  justify-content: space-between;
-  width: 90%;
+  justify-content: center;
+  width: 80%;
   margin: 0 auto;
 }
 .prices_item {
@@ -252,8 +275,9 @@ body {
   box-sizing: border-box;
   border-radius:10px;
   list-style: none;
-  height: 480px;
-  width: 28%;
+  height: 420px;
+  width: 32%;
+  margin: 0 30px;
   position: relative;
 }
 .prices_item img {
@@ -373,7 +397,7 @@ body {
 .flow > li dl dt {
   font-size: 3rem;
   font-weight: 600;
-  color: rgb(107,144,219);
+  color: #333;
   margin-bottom: 10px;
 }
 .flow > li dl dd {
@@ -391,7 +415,233 @@ body {
   text-align: center;
   margin-bottom:50px;
 }
-.footer p {
-  text-align:center;
-  font-size:$base_fs;
+
+.footer {
+  height: 80px;
+  line-height:80px;
+}
+
+.footer_list {
+  display: flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.footer_item {
+  font-size:2rem;
+  color: #4C4C4C;
+  transition: all 0.2s;
+  margin: 0 40px ;
+}
+
+.footer_item a:hover {
+  color: #2164E1;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+
+.sp-only {
+  display: none;
+}
+
+@media (max-width: 599px) {
+  .sp-only {
+    display:block;
+  }
+  .pc-only {
+    display: none;
+  }
+  .max-width {
+    max-width: 588px;
+    margin: 60px auto;
+  }
+  .header {
+    height: 50px;
+    margin: 0 auto;
+  }
+  .header img {
+    width: 110px;
+    height: 33px;
+  }
+  .hum-btn {
+    position:absolute;
+    top: 15px;
+    right:30px;
+    z-index: 1;
+  }
+  .hum_bar {
+    width: 35px;
+    height: 2px;
+    display: block;
+    background-color:#000;
+    margin: 6px 0;
+  }
+  .hum_bar.show {
+    background-color:#fff;
+  }
+  .hum_list {
+    width: 100vw;
+    height: 100vh;
+    position:fixed;
+    top: 0;
+    right: -500px;
+    background-color:rgba(000, 000, 000, 0.9);
+    transition:all 0.5s ease;
+  }
+  .hum_list{
+    list-style: none;
+    color: #fff;
+    display: flex;
+    justify-content:center;
+    flex-direction:column;
+    align-items:center;
+  }
+  .hum_item {
+    font-size:2.2rem;
+    margin: 50px 0;
+  }
+  .hum_list.show {
+    right: 0;
+  }
+  .points_main{
+    flex-direction:column;
+    padding: 0 20px;
+  }
+
+  .points_text h2{
+    font-size:2.7rem;
+    margin-bottom:9px;
+  }
+  .points_text p{
+    font-size:1.6rem;
+  }
+  .points_img {
+    width: 100%;
+    height: 250px;
+    font-size:1.2rem;
+    border-top: 17px solid #eee;
+    margin-top: 40px;
+    position: relative;
+    z-index: -1;
+  }
+  .points_img ul {
+    position: absolute;
+    top: -15px;
+  }
+  .points_detail {
+    flex-direction:column-reverse;
+    padding: 0 20px;
+    margin-top: 150px;
+  }
+  .points_detail_text h3 {
+    font-size:2.5rem;
+  }
+  .points_detail_text li {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin-bottom: 5px;
+  }
+  .points_detail_img{
+    width: 85%;
+    height: 216px;
+  }
+  .services{
+    padding: 60px 15px;
+  }
+
+  .services_item:nth-child(odd){
+    flex-direction:column;
+  }
+  .services_item_img{
+    min-width: 300px;
+    width: 100%;
+    height: 220px;
+  }
+  .services_item_text {
+    width: 95%;
+  }
+  .services_item_text h3{
+    font-size:2.5rem;
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+  .services_item_text p {
+    font-size: 1.8rem;
+    margin-top: 5px;
+    line-height: 1.7;
+  }
+  .services_item{
+    flex-direction:column;
+  }
+  .influences h4 {
+    font-size: 3.5rem;
+  }
+  .influences_span{
+    font-size:7rem;
+  }
+  .prices h2 {
+    font-size:3rem;
+  }
+  .prices_list{
+    flex-direction:column;
+    align-items:center;
+  }
+  .prices_item {
+    width:90%;
+    height: 416px;
+    margin-top: 60px;
+  }
+  .prices_item:first-child {
+    margin-top: 0;
+  }
+  .prices_item p {
+    font-size:3rem;
+  }
+  .implement {
+    margin-top: 120px;
+  }
+  .implement h2{
+    font-size:3rem;
+  }
+  .flow>li .icon{
+      font-size:1.3rem;
+      left: -25px;
+      padding: 6px 6px;
+  }
+  .flow>li dl{
+    padding-left:73px;
+  }
+  .flow{
+    padding-left: 0;
+    width: 83%;
+  }
+  .flow>li dl dt {
+    font-size:2.4rem;
+  }
+  .flow::before {
+    left: 49px;
+    width: 6px;
+  }
+  .flow>li dl::after{
+    top: 11px;
+    width: 20px;
+  }
+  .flow>li dl dd {
+    font-size:1.7rem;
+    line-height:1.7;
+  }
+  .contact {
+    width: 90%;
+  }
+  .contact h2 {
+    font-size:3rem;
+    margin-top: 120px;
+  }
+  .footer_list{
+    flex-direction:row;
+  }
+  .footer_item {
+    margin: 0 15px;
+  }
 }
